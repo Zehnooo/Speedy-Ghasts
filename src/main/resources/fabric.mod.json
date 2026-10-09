@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "speedy-ghasts",
+	"version": "${version}",
+	"name": "speedy-ghasts",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/speedy-ghasts/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"zehno.speedy_ghasts.SpeedyGhasts"
+		],
+		"client": [
+			"zehno.speedy_ghasts.client.SpeedyGhastsClient"
+		]
+	},
+	"mixins": [
+		"speedy-ghasts.mixins.json",
+		{
+			"config": "speedy-ghasts.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
